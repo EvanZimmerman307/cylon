@@ -1,0 +1,30 @@
+name: cylon_nccl_dev
+channels:
+  - rapidsai
+  - conda-forge
+  - nvidia
+  - defaults
+dependencies:
+  - python>=3.8,<3.10
+  - cmake>=3.23.1
+  #- arrow-cpp=14.0.2
+  #- pyarrow=14.0.2
+  - glog
+  - openmpi=4.1.4
+  - ucx>=1.12.1
+  - cython>=0.29.31,<3
+  - numpy<1.24.4
+  - pandas>=1.0
+  - fsspec>=0.6.0
+  - setuptools
+  - cudf=24.06
+  - cuda-version=12.0
+  - cuda-toolkit=12.5
+  - nccl=2.22.3.1
+  # they are not needed for using pygcylon or compiling it
+  - pytest
+  - pytest-mpi
+  - mpi4py
+  - gcc=11.4
+  - gxx=11.4
+  - gxx_linux-64=11.4
