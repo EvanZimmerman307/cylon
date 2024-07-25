@@ -380,6 +380,32 @@ if (CYLON_GLOO)
     add_definitions(-DGLOO_USE_MPI)
 endif()
 
+# nccl
+option(CYLON_NCCL "Build Cylon with NCCL" OFF)
+if (CYLON_NCCL)
+    message("Cylon NCCL enabled")
+    add_definitions(-DBUILD_CYLON_NCCL)
+
+    #if (NOT GLOO_INSTALL_PREFIX)
+    #    message(FATAL_ERROR "CYLON_GLOO is set, GLOO_INSTALL_PREFIX should also be set")
+    #endif ()
+
+    find_package(nccl REQUIRED) # CONFIG HINTS ${GLOO_INSTALL_PREFIX}
+    message(STATUS "nccl include dirs: ${NCCL_INCLUDE_DIRS}")
+    message(STATUS "nccl libs: ${NCCL_LIBRARIES}")
+
+    include_directories(SYSTEM ${NCCL_INCLUDE_DIRS})
+    link_directories(${NCCL_LIBRARIES})
+
+    #if (EXISTS "${GLOO_INCLUDE_DIRS}/gloo/mpi/context.h")
+    #    set(GLOO_USE_MPI ON)
+    #else ()
+    #    set(GLOO_USE_MPI OFF)
+    #endif ()
+    #message(STATUS "gloo use mpi: ${GLOO_USE_MPI}")
+    #add_definitions(-DGLOO_USE_MPI)
+endif()
+
 
 # Arrow
 if (NOT ARROW_BUILD_TYPE)

@@ -24,7 +24,8 @@ enum CommType {
   TCP = 2,
   UCX = 3,
   GLOO = 4,
-  UCC = 5
+  UCC = 5,
+  NCCL = 6
 };
 }  // namespace net
 }  // namespace cylon

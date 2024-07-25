@@ -20,6 +20,7 @@
 #include <cudf/table/table.hpp>
 #include <cudf/io/types.hpp>
 #include <cuda.h>
+#include <rmm/device_buffer.hpp>
 
 #include <stdlib.h>
 #include <time.h>
@@ -33,24 +34,26 @@ using namespace std;
  * @return
  */
 std::unique_ptr<cudf::column> constructLongColumn(int64_t size, int64_t value_start = 0, int step = 1) {
-  std::vector<int64_t> cpu_buf(size, 0);
+  std::vector<int64_t> cpu_buf(size);
   for (int64_t i = 0; i < size; i++) {
     cpu_buf[i] = value_start;
     value_start += step;
   }
 
-  // allocate byte buffer on gpu
-  rmm::device_buffer rmm_buf(size * sizeof(int64_t), rmm::cuda_stream_default);
+  // Create a non-null mask (all valid)
+  rmm::device_buffer null_mask(0, rmm::cuda_stream_default);
 
-  // copy array to gpu
-  auto result = cudaMemcpy(rmm_buf.data(), cpu_buf.data(), size * sizeof(int64_t), cudaMemcpyHostToDevice);
-  if (result != cudaSuccess) {
-    cout << cudaGetErrorString(result) << endl;
-    return nullptr;
-  }
+  // Create a device_buffer from the host vector
+  rmm::device_buffer d_buffer(cpu_buf.data(), size * sizeof(int64_t), rmm::cuda_stream_default);
 
-  cudf::data_type dt(cudf::type_id::INT64);
-  return std::make_unique<cudf::column>(dt, size, std::move(rmm_buf));
+  // Create the column
+  return std::make_unique<cudf::column>(
+    cudf::data_type{cudf::type_id::INT64},
+    size,
+    std::move(d_buffer),
+    std::move(null_mask),
+    0  // Assume all elements are valid
+  );
 }
 
 /**
@@ -60,7 +63,7 @@ std::unique_ptr<cudf::column> constructLongColumn(int64_t size, int64_t value_st
  * @return
  */
 std::unique_ptr<cudf::column> constructRandomLongColumn(int64_t size, int seed) {
-  std::vector<int64_t> cpu_buf(size, 0);
+  std::vector<int64_t> cpu_buf(size);
 
   std::mt19937 generator(seed);
   int64_t min = 0;
@@ -70,18 +73,20 @@ std::unique_ptr<cudf::column> constructRandomLongColumn(int64_t size, int seed) 
     cpu_buf[i] = distribution(generator);
   }
 
-  // allocate byte buffer on gpu
-  rmm::device_buffer rmm_buf(size * sizeof(int64_t), rmm::cuda_stream_default);
-  // copy array to gpu
-  auto result = cudaMemcpy(rmm_buf.data(), cpu_buf.data(), size * sizeof(int64_t), cudaMemcpyHostToDevice);
-  if (result != cudaSuccess) {
-    cout << cudaGetErrorString(result) << endl;
-    return nullptr;
-  }
+  // Create a device_buffer from the host vector
+  rmm::device_buffer d_buffer(cpu_buf.data(), size * sizeof(int64_t), rmm::cuda_stream_default);
 
-  cudf::data_type dt(cudf::type_id::INT64);
-  auto col = std::make_unique<cudf::column>(dt, size, std::move(rmm_buf));
-  return col;
+  // Create a non-null mask (all valid)
+  rmm::device_buffer null_mask(0, rmm::cuda_stream_default);
+
+  // Create the column
+  return std::make_unique<cudf::column>(
+    cudf::data_type{cudf::type_id::INT64},
+    size,
+    std::move(d_buffer),
+    std::move(null_mask),
+    0  // Assume all elements are valid
+  );
 }
 
 /**
