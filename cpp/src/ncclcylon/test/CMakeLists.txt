@@ -1,23 +1,11 @@
-cmake_minimum_required(VERSION 3.26.4)
+cmake_minimum_required(VERSION 3.10)
+project(CylonTest)
 
-include(../set_cuda_architecture.cmake)
+find_package(MPI REQUIRED)
+find_package(glog REQUIRED)
+set(GLOG_LIBRARIES glog::glog)
 
-# initialize cuda architecture
-rapids_cuda_init_architectures(create_cudf_table_test)
-rapids_cuda_set_architectures(RAPIDS)
+add_library(mpi_channel /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/mpi/mpi_channel.cpp)
 
-project(
-  create_cudf_table_test
-  VERSION 0.0.1
-  LANGUAGES CXX CUDA
-)
-
-include(../fetch_dependencies.cmake)
-
-# Configure your project here
-add_executable(create_cudf_table_test src/create_cudf_table_test.cpp)
-target_link_libraries(create_cudf_table_test PRIVATE cudf::cudf)
-target_compile_features(create_cudf_table_test PRIVATE cxx_std_17)
-
-install(TARGETS create_cudf_table_test DESTINATION bin/examples/libcudf)
-install(FILES ${CMAKE_CURRENT_LIST_DIR}/create_cudf_table_test.csv DESTINATION bin/examples/libcudf)
+add_executable(mpi_channel_test src/mpi_channel_test.cpp)
+target_link_libraries(mpi_channel_test cylon_context mpi_channel ${MPI_LIBRARIES})

@@ -85,6 +85,17 @@ Status CylonContext::InitDistributed(const std::shared_ptr<cylon::net::CommConfi
       return {Code::NotImplemented, "Gloo communication not implemented"};
 #endif
     }
+
+    case net::NCCL: {
+#ifdef BUILD_CYLON_NCCL
+      *ctx = std::make_shared<CylonContext>(true);
+      auto pool = (*ctx)->GetMemoryPool();
+      return net::NcclCommunicator::Make(config, pool, &(*ctx)->communicator);  
+#else
+      return {Code::NotImplemented, "NCCL communication not implemented"};
+#endif
+    }
+
   }
   return {Code::Invalid, "Cannot reach here!"};
 }
