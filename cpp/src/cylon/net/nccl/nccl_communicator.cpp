@@ -64,7 +64,7 @@ int NCCLCommunicator::GetWorldSize() const {
 
 Status NCCLCommunicator::Make(const std::shared_ptr<CommConfig> &config,
                              MemoryPool *pool,
-                             std::shared_ptr<Communicator> *out) {
+                             std::shared_ptr<Communicator> *mpi_out, std::shared_ptr<Communicator> *nccl_out) {
   int myRank, nRanks, ext_init;
   // check if MPI is initialized
   RETURN_CYLON_STATUS_IF_MPI_FAILED(MPI_Initialized(&ext_init));
