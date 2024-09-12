@@ -66,23 +66,23 @@ else (CYLON_GLOO)
     set(CYLON_GLOO_FILES)
 endif (CYLON_GLOO)
 
-#if (CYLON_NCCL)
-#    set(CYLON_NCCL_FILES
-#            net/nccl/nccl_channel.cpp
-#            net/nccl/nccl_channel.hpp
-#            net/nccl/nccl_communicator.cpp
-#            net/nccl/nccl_communicator.hpp
+if (CYLON_NCCL)
+    set(CYLON_NCCL_FILES
+            net/nccl/nccl_channel.cpp
+            net/nccl/nccl_channel.hpp
+            net/nccl/nccl_communicator.cpp
+            net/nccl/nccl_communicator.hpp)
 #            net/nccl/nccl_operations.cpp
 #            net/nccl/nccl_operations.hpp)
-#else (CYLON_NCCL)
-#    set(CYLON_NCCL_FILES)
-#endif (CYLON_NCCL)
+else (CYLON_NCCL)
+    set(CYLON_NCCL_FILES)
+endif (CYLON_NCCL)
 
 add_library(cylon SHARED
         ${UCX_CYLON_FILES}
         ${UCC_CYLON_FILES}
         ${CYLON_GLOO_FILES}
-#        ${CYLON_NCCL_FILES}
+        ${CYLON_NCCL_FILES}
         ${UCX_REDIS_CYLON_FILES}
         arrow/arrow_all_to_all.cpp
         arrow/arrow_all_to_all.hpp
@@ -289,9 +289,9 @@ if (CYLON_GLOO)
     target_link_libraries(cylon ${GLOO_LIBRARIES})
 endif ()
 
-#if (CYLON_NCCL)
-#    target_link_libraries(cylon ${NCCL_LIBRARIES})
-#endif ()
+if (CYLON_NCCL)
+    target_link_libraries(cylon ${NCCL_LIBRARIES})
+endif ()
 
 if (PYCYLON_BUILD)
     target_link_libraries(cylon ${Python3_LIBRARIES})

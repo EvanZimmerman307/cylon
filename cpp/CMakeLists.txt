@@ -386,11 +386,11 @@ if (CYLON_NCCL)
     message("Cylon NCCL enabled")
     add_definitions(-DBUILD_CYLON_NCCL)
 
-    #if (NOT GLOO_INSTALL_PREFIX)
-    #    message(FATAL_ERROR "CYLON_GLOO is set, GLOO_INSTALL_PREFIX should also be set")
-    #endif ()
+    if (NOT NCCL_INSTALL_PREFIX)
+        message(FATAL_ERROR "CYLON_NCCL is set, NCCL_INSTALL_PREFIX should also be set")
+    endif ()
 
-    find_package(nccl REQUIRED) # CONFIG HINTS ${GLOO_INSTALL_PREFIX}
+    #find_package(nccl REQUIRED) # CONFIG HINTS ${NCCL_INSTALL_PREFIX}
     message(STATUS "nccl include dirs: ${NCCL_INCLUDE_DIRS}")
     message(STATUS "nccl libs: ${NCCL_LIBRARIES}")
 

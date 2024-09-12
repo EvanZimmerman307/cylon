@@ -141,7 +141,7 @@ def check_and_install_cpplint():
                           "hpp;--filter=-legal/copyright,-build/c++11,-runtime/references\" "
 
 
-CMAKE_BOOL_FLAGS = {'CYLON_GLOO', 'CYLON_UCX', 'CYLON_UCC'}
+CMAKE_BOOL_FLAGS = {'CYLON_GLOO', 'CYLON_UCX', 'CYLON_UCC', 'CYLON_NCCL'}
 CMAKE_FALSE_OPTIONS = {'0', 'FALSE', 'OFF', 'N', 'NO', 'IGNORE', 'NOTFOUND'}
 
 
@@ -169,7 +169,9 @@ def parse_cmake_flags(flag):
 
 
 CYLON_GLOO = parse_cmake_flags('CYLON_GLOO')
+CYLON_NCCL = parse_cmake_flags('CYLON_NCCL')
 GLOO_PREFIX = parse_cmake_flags('GLOO_INSTALL_PREFIX')
+NCCL_PREFIX = parse_cmake_flags('NCCL_INSTALL_PREFIX')
 CYLON_REDIS = parse_cmake_flags("CYLON_USE_REDIS")
 CYLON_UCX = parse_cmake_flags('CYLON_UCX')
 CYLON_UCC = parse_cmake_flags('CYLON_UCC')
@@ -194,7 +196,9 @@ logger.info(f"Build threads  : {PARALLEL}")
 logger.info(f"Install path   : {INSTALL_DIR}")
 logger.info(f"CMake flags    : {CMAKE_FLAGS}")
 logger.info(f" -CYLON_GLOO   : {CYLON_GLOO}")
+logger.info(f" -CYLON_NCCL   : {CYLON_NCCL}")
 logger.info(f" -GLOO_PREFIX  : {GLOO_PREFIX}")
+logger.info(f" -NCCL_PREFIX  : {NCCL_PREFIX}")
 logger.info(f" -REDIS_PREFIX  : {REDIS_PREFIX}")
 logger.info(f" -CYLON_UCX    : {CYLON_UCX}")
 logger.info(f" -CYLON_UCC    : {CYLON_UCC}")
@@ -305,6 +309,16 @@ def python_test():
 
                 env['LD_LIBRARY_PATH'] = os.path.join(GLOO_PREFIX, "lib") + os.pathsep + \
                                          env['LD_LIBRARY_PATH']
+            
+            if CYLON_NCCL:
+                env['CYLON_NCCL'] = str(CYLON_NCCL)
+                env['NCCL_PREFIX'] = NCCL_PREFIX
+
+                env['LD_LIBRARY_PATH'] = os.path.join(NCCL_PREFIX, "lib") + os.pathsep + \
+                                         env['LD_LIBRARY_PATH']
+                env['NCCL_INCLUDE_DIRS'] = os.path.join(NCCL_PREFIX, "include")
+                env['NCCL_LIBRARIES'] = os.path.join(NCCL_PREFIX, "lib")
+
 
             if UCX_INSTALL_PREFIX is not None:
                 env['UCX_LOCAL_INSTALL'] = '1'
@@ -371,6 +385,11 @@ def build_python():
     if CYLON_GLOO:
         env['CYLON_GLOO'] = str(CYLON_GLOO)
         env['GLOO_PREFIX'] = GLOO_PREFIX
+    if CYLON_NCCL:
+        env['CYLON_NCCL'] = str(CYLON_NCCL)
+        env['NCCL_PREFIX'] = NCCL_PREFIX
+        env['NCCL_INCLUDE_DIRS'] = os.path.join(NCCL_PREFIX, "include")
+        env['NCCL_LIBRARIES'] = os.path.join(NCCL_PREFIX, "lib")
     if CYLON_UCC and CYLON_UCX:
         env['CYLON_UCX'] = str(CYLON_UCX)
         env['CYLON_UCC'] = str(CYLON_UCC)

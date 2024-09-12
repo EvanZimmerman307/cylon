@@ -29,6 +29,10 @@
 #include "cylon/net/gloo/gloo_communicator.hpp"
 #endif
 
+#ifdef BUILD_CYLON_NCCL
+#include "cylon/net/nccl/nccl_communicator.hpp"
+#endif
+
 namespace cylon {
 
 std::shared_ptr<CylonContext> CylonContext::Init() {
