@@ -1,5 +1,5 @@
-PYTHON ENV PATH       = /u/ewz9kg/miniconda3/envs/cylon_nccl_dev
-BUILD PATH            = /u/ewz9kg/miniconda3/envs/cylon_nccl_dev/build
+PYTHON ENV PATH       = /u/ewz9kg/gcylon_env
+BUILD PATH            = /u/ewz9kg/gcylon_env/build
 FLAG CPP BUILD        = OFF
 FLAG PYTHON BUILD     = OFF
 FLAG BUILD DEBUG      = OFF
@@ -10,4 +10,4 @@ RUN PYGCYLON TESTS    = OFF
 FLAG STYLE CHECK      = OFF
 ADDITIONAL CMAKE FLAGS= 
 MAKE MAKE_JOBS        = 4
-\-ipath|--install_path is NOT set default to /u/ewz9kg/miniconda3/envs/cylon_nccl_dev/build
+\-ipath|--install_path is NOT set default to /u/ewz9kg/gcylon_env/build/build

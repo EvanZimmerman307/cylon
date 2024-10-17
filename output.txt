@@ -1,0 +1,1690 @@
+[INFO] =================================================================
+[INFO] OS             : Linux
+[INFO] Python exec    : /u/ewz9kg/gcylon_env/bin/python
+[INFO] Build mode     : Release
+[INFO] Build path     : /u/ewz9kg/cylon_nccl_dev/build
+[INFO] Build threads  : 20
+[INFO] Install path   : /u/ewz9kg/gcylon_env
+[INFO] CMake flags    : -DCYLON_NCCL=1 -DNCCL_INSTALL_PREFIX=/u/ewz9kg/gcylon_env
+[INFO]  -CYLON_GLOO   : None
+[INFO]  -CYLON_NCCL   : True
+[INFO]  -GLOO_PREFIX  : None
+[INFO]  -NCCL_PREFIX  : /u/ewz9kg/gcylon_env
+[INFO]  -REDIS_PREFIX  : None
+[INFO]  -CYLON_UCX    : None
+[INFO]  -CYLON_UCC    : None
+[INFO]  -UCC_PREFIX   : None
+[INFO] Run C++ tests  : False
+[INFO] Build PyCylon  : True
+[INFO] Run Py tests   : False
+[INFO] =================================================================
+[INFO] export cc: : /u/ewz9kg/gcylon_env/bin/mpicc
+[INFO] export cxx: : /u/ewz9kg/gcylon_env/bin/mpicxx
+[INFO] export mpicc: : /u/ewz9kg/gcylon_env/bin/mpicc
+[INFO] export mpicxx: : /u/ewz9kg/gcylon_env/bin/mpicxx
+[INFO] Generate command: cmake -DPYCYLON_BUILD=ON  -DCMAKE_BUILD_TYPE=Release -DCYLON_WITH_TEST=OFF  -DCMAKE_INSTALL_PREFIX=/u/ewz9kg/gcylon_env  -DCYLON_NCCL=1 -DNCCL_INSTALL_PREFIX=/u/ewz9kg/gcylon_env /u/ewz9kg/cylon_nccl_dev/cpp
+-- System processor: x86_64
+Required CYLON_SIMD_LEVEL: SSE4_2
+CXX_COMMON_FLAGS:  -msse4.2
+Running on Release mode...
+CONDA_PREFIX detected: /u/ewz9kg/gcylon_env
+-- Conda environment detected, CMAKE_SYSTEM_PREFIX_PATH set to: /u/ewz9kg/gcylon_env;/u/ewz9kg/gcylon_env/bin/../x86_64-conda-linux-gnu/sysroot/usr;/usr/local;/usr;/;/u/ewz9kg/gcylon_env;/u/ewz9kg/gcylon_env;/usr/X11R6;/usr/pkg;/opt;/u/ewz9kg/gcylon_env
+-- CONDA_INCLUDE_DIRS set to: /u/ewz9kg/gcylon_env/include
+-- CONDA_LINK_DIRS set to: /u/ewz9kg/gcylon_env/lib;/u/ewz9kg/gcylon_env/Library/lib
+Cylon Python Build enabled
+-- Python3 executable: /u/ewz9kg/gcylon_env/bin/python3.11
+-- Python3 include dir: /u/ewz9kg/gcylon_env/include/python3.11
+-- Python3 libraries: /u/ewz9kg/gcylon_env/lib/libpython3.11.so
+-- Python3 NumPy include dir: /u/ewz9kg/gcylon_env/lib/python3.11/site-packages/numpy/core/include
+Finding MPI
+-- MPI include dir: 
+-- MPI libs: 
+-- MPI executable: /u/ewz9kg/gcylon_env/bin/mpiexec
+-- MPI parallelism flag: -np
+-- MPI executable params: --allow-run-as-root;--oversubscribe
+Using Conda Glog
+-- Glog libs: glog::glog
+Cylon NCCL enabled
+-- nccl include dirs: /u/ewz9kg/gcylon_env/include
+-- nccl libs: /u/ewz9kg/gcylon_env/lib/libnccl.so
+Finding Arrow from SYSTEM
+-- Arrow version: 16.1.0
+-- Found the Arrow shared library: /u/ewz9kg/gcylon_env/lib/libarrow.so.1601.0.0
+-- Found the Arrow import library: ARROW_IMPORT_LIB-NOTFOUND
+-- Found the Arrow static library: 
+-- Arrow ver: 1601.0.0
+-- Arrow include dir: /u/ewz9kg/gcylon_env/include
+-- Arrow lib dir: 
+-- Arrow lib: /u/ewz9kg/gcylon_env/lib/libarrow.so
+-- Arrow dataset lib: /u/ewz9kg/gcylon_env/lib/libarrow_dataset.so
+-- Arrow py lib: /u/ewz9kg/gcylon_env/lib/libarrow_python.so
+Cylon Parquet enabled
+-- Parquet lib: /u/ewz9kg/gcylon_env/lib/libparquet.so
+-- Configuring done (8.2s)
+-- Generating done (2.8s)
+-- Build files have been written to: /u/ewz9kg/cylon_nccl_dev/build
+[INFO] C++ cmake generate completed successfully
+[INFO] Build command: cmake --build . --parallel 20 --config Release 
+[  2%] Building CXX object src/cylon/CMakeFiles/cylon.dir/net/nccl/nccl_channel.cpp.o
+[  2%] Building CXX object src/cylon/CMakeFiles/cylon.dir/net/nccl/nccl_communicator.cpp.o
+[  3%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ctx/cylon_context.cpp.o
+[  4%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/api/parallel_op.cpp.o
+[ 10%] Building CXX object src/cylon/CMakeFiles/cylon.dir/net/ops/gather.cpp.o
+[ 10%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops.cpp.o
+[ 10%] Building CXX object src/cylon/CMakeFiles/cylon.dir/net/cylon_request.cpp.o
+[ 10%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/kernels/row_comparator.cpp.o
+[ 18%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/execution/execution.cpp.o
+[ 18%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/kernels/join_kernel.cpp.o
+[ 10%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/dis_join_op.cpp.o
+[ 18%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/merge_op.cpp.o
+[ 18%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/kernels/set_kernel.cpp.o
+[ 18%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/join_op.cpp.o
+[ 18%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/kernels/prepare_array.cpp.o
+[ 10%] Building CXX object src/cylon/CMakeFiles/cylon.dir/net/ops/all_to_all.cpp.o
+[ 18%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/dis_set_op.cpp.o
+[ 18%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/all_to_all_op.cpp.o
+[ 10%] Building CXX object src/cylon/CMakeFiles/cylon.dir/net/ops/bcast.cpp.o
+[ 18%] Building CXX object src/cylon/CMakeFiles/cylon.dir/ops/kernels/partition.cpp.o
+In file included from /u/ewz9kg/gcylon_env/include/nccl.h:10,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/nccl/nccl_channel.cpp:16:
+/u/ewz9kg/gcylon_env/include/cuda_runtime.h:83:10: fatal error: crt/host_config.h: No such file or directory
+   83 | #include "crt/host_config.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [src/cylon/CMakeFiles/cylon.dir/build.make:76: src/cylon/CMakeFiles/cylon.dir/net/nccl/nccl_channel.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from /u/ewz9kg/gcylon_env/include/nccl.h:10,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/nccl/nccl_communicator.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ctx/cylon_context.cpp:33:
+/u/ewz9kg/gcylon_env/include/cuda_runtime.h:83:10: fatal error: crt/host_config.h: No such file or directory
+   83 | #include "crt/host_config.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [src/cylon/CMakeFiles/cylon.dir/build.make:286: src/cylon/CMakeFiles/cylon.dir/ctx/cylon_context.cpp.o] Error 1
+In file included from /u/ewz9kg/gcylon_env/include/nccl.h:10,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/nccl/nccl_communicator.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/nccl/nccl_communicator.cpp:20:
+/u/ewz9kg/gcylon_env/include/cuda_runtime.h:83:10: fatal error: crt/host_config.h: No such file or directory
+   83 | #include "crt/host_config.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [src/cylon/CMakeFiles/cylon.dir/build.make:90: src/cylon/CMakeFiles/cylon.dir/net/nccl/nccl_communicator.cpp.o] Error 1
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/mpi/mpi_operations.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/ops/bcast.cpp:16:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/kernels/row_comparator.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/kernels/row_comparator.cpp:15:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/mpi/mpi_operations.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/ops/gather.cpp:21:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/kernels/prepare_array.cpp:17:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/column.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/ops/base_ops.hpp:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/mpi/mpi_operations.hpp:24:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/column.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/ops/base_ops.hpp:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/net/mpi/mpi_operations.hpp:24:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/kernels/partition.cpp:17:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/indexing/index.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/table.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/api/parallel_op.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/dis_join_op.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/dis_join_op.cpp:17:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/kernels/prepare_array.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/kernels/set_kernel.cpp:16:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/arrow/arrow_all_to_all.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/all_to_all_op.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/all_to_all_op.cpp:17:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/indexing/index.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/table.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/api/parallel_op.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/dis_set_op.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/dis_set_op.cpp:15:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/indexing/index.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/table.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/api/parallel_op.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/api/parallel_op.cpp:15:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/indexing/index.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/table.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/api/parallel_op.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/execution/execution.cpp:16:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/indexing/index.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/table.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/api/parallel_op.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/join_op.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/join_op.cpp:16:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/indexing/index.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/table.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops.cpp:17:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/indexing/index.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/table.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/kernels/join_kernel.cpp:17:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/buffer.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:27,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/array_base.h:26,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array.h:41,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:22,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/util/arrow_utils.hpp:18,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/indexing/index.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/table.hpp:23,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/api/parallel_op.hpp:19,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/merge_op.hpp:20,
+                 from /u/ewz9kg/cylon_nccl_dev/cpp/src/cylon/ops/merge_op.cpp:17:
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::MakeStream(unsigned int)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:142:67: warning: unused parameter 'flags' [-Wunused-parameter]
+  142 |   virtual Result<std::shared_ptr<Stream>> MakeStream(unsigned int flags) {
+      |                                                      ~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h: In member function 'virtual arrow::Result<std::shared_ptr<arrow::Device::Stream> > arrow::Device::WrapStream(void*, Stream::release_fn_t)':
+/u/ewz9kg/gcylon_env/include/arrow/device.h:152:60: warning: unused parameter 'device_stream' [-Wunused-parameter]
+  152 |   virtual Result<std::shared_ptr<Stream>> WrapStream(void* device_stream,
+      |                                                      ~~~~~~^~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/device.h:153:75: warning: unused parameter 'release_fn' [-Wunused-parameter]
+  153 |                                                      Stream::release_fn_t release_fn) {
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/data.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1726:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1726 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::DayTimeIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1762:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1762 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/type.h: In member function 'virtual std::string arrow::MonthDayNanoIntervalType::ToString(bool) const':
+/u/ewz9kg/gcylon_env/include/arrow/type.h:1802:29: warning: unused parameter 'show_metadata' [-Wunused-parameter]
+ 1802 |   std::string ToString(bool show_metadata = false) const override { return name(); }
+      |                        ~~~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_adaptive.h:25,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:22,
+                 from /u/ewz9kg/gcylon_env/include/arrow/api.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In member function 'virtual arrow::Status arrow::ArrayBuilder::AppendArraySlice(const arrow::ArraySpan&, int64_t, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:52: warning: unused parameter 'array' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                   ~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:178:67: warning: unused parameter 'offset' [-Wunused-parameter]
+  178 |   virtual Status AppendArraySlice(const ArraySpan& array, int64_t offset,
+      |                                                           ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:179:43: warning: unused parameter 'length' [-Wunused-parameter]
+  179 |                                   int64_t length) {
+      |                                   ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilder(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: warning: redundant move in return statement [-Wredundant-move]
+  334 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:334:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeBuilderExactIndex(const std::shared_ptr<DataType>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: warning: redundant move in return statement [-Wredundant-move]
+  348 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:348:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h: In function 'arrow::Result<std::unique_ptr<arrow::ArrayBuilder> > arrow::MakeDictionaryBuilder(const std::shared_ptr<DataType>&, const std::shared_ptr<Array>&, MemoryPool*)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: warning: redundant move in return statement [-Wredundant-move]
+  367 |   return std::move(out);
+      |          ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_base.h:367:19: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:29,
+                 from /u/ewz9kg/gcylon_env/include/arrow/builder.h:26:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:35:32: warning: unused parameter 'alignment' [-Wunused-parameter]
+   35 |                        int64_t alignment = kDefaultBufferAlignment)
+      |                        ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h: In constructor 'arrow::NullBuilder::NullBuilder(const std::shared_ptr<arrow::DataType>&, arrow::MemoryPool*, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_primitive.h:37:57: warning: unused parameter 'type' [-Wunused-parameter]
+   37 |   explicit NullBuilder(const std::shared_ptr<DataType>& type,
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/scalar.h:39,
+                 from /u/ewz9kg/gcylon_env/include/arrow/array/builder_dict.h:32:
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal128, arrow::Decimal128> > arrow::Decimal128::Divide(const arrow::Decimal128&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: warning: redundant move in return statement [-Wredundant-move]
+   83 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:83:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal128> arrow::Decimal128::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: warning: redundant move in return statement [-Wredundant-move]
+  121 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:121:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<arrow::Decimal256> arrow::Decimal256::Rescale(int32_t, int32_t) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: warning: redundant move in return statement [-Wredundant-move]
+  221 |     return std::move(out);
+      |            ~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:221:21: note: remove 'std::move' call
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h: In member function 'arrow::Result<std::pair<arrow::Decimal256, arrow::Decimal256> > arrow::Decimal256::Divide(const arrow::Decimal256&) const':
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: warning: redundant move in return statement [-Wredundant-move]
+  238 |     return std::move(result);
+      |            ~~~~~~~~~^~~~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/util/decimal.h:238:21: note: remove 'std::move' call
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+In file included from /u/ewz9kg/gcylon_env/include/arrow/builder.h:29:
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRun(const std::shared_ptr<const arrow::Scalar>&, int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:77:68: warning: unused parameter 'value' [-Wunused-parameter]
+   77 |   virtual Status WillCloseRun(const std::shared_ptr<const Scalar>& value,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:78:39: warning: unused parameter 'length' [-Wunused-parameter]
+   78 |                               int64_t length) {
+      |                               ~~~~~~~~^~~~~~
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h: In member function 'virtual arrow::Status arrow::internal::RunCompressorBuilder::WillCloseRunOfEmptyValues(int64_t)':
+/u/ewz9kg/gcylon_env/include/arrow/array/builder_run_end.h:89:52: warning: unused parameter 'length' [-Wunused-parameter]
+   89 |   virtual Status WillCloseRunOfEmptyValues(int64_t length) { return Status::OK(); }
+      |                                            ~~~~~~~~^~~~~~
+gmake[1]: *** [CMakeFiles/Makefile2:422: src/cylon/CMakeFiles/cylon.dir/all] Error 2
+gmake: *** [Makefile:136: all] Error 2
+[ERROR] C++ cmake build failed with a non zero exit code (2). Cylon build is terminating.

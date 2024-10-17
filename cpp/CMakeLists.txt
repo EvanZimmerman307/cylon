@@ -390,7 +390,9 @@ if (CYLON_NCCL)
         message(FATAL_ERROR "CYLON_NCCL is set, NCCL_INSTALL_PREFIX should also be set")
     endif ()
 
-    #find_package(nccl REQUIRED) # CONFIG HINTS ${NCCL_INSTALL_PREFIX}
+    # find_package(nccl REQUIRED CONFIG HINTS ${NCCL_INSTALL_PREFIX})
+    set(NCCL_INCLUDE_DIRS "$ENV{CONDA_PREFIX}/include")
+    set(NCCL_LIBRARIES "$ENV{CONDA_PREFIX}/lib/libnccl.so")
     message(STATUS "nccl include dirs: ${NCCL_INCLUDE_DIRS}")
     message(STATUS "nccl libs: ${NCCL_LIBRARIES}")
 
